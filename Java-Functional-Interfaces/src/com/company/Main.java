@@ -33,6 +33,19 @@ public class Main {
                 System.out.println(s);
             }
         }
+
+    A a = new A();
+        a.test(2);
+    }
+
+    public int test(){
+        testStatic();
+        return 123;
+
+    }
+
+     static void testStatic(){
+        new Main().test();
     }
 }
 
@@ -47,4 +60,23 @@ interface Calculate{
     public static void tes1(){
         System.out.println("Test");
     }
+}
+
+interface Test{
+    int a=30;
+    int test(int a);
+}
+
+class A implements Test{
+
+    @Override
+    public int test(int a) {
+
+        System.out.println(Test.a);
+        return 0;
+    }
+}
+
+abstract class AbstratcExample{
+
 }
